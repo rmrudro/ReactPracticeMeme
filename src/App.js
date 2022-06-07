@@ -4,6 +4,8 @@ import Header from './Components/Header'
 import Meme from './Components/Meme'
 import Counter from './Components/Counter'
 import ReactSate from './Components/ReactState';
+import BusinessCard from './Components/BusinessCard';
+import ArrayExem from './Components/ArrayExem'
 import { BrowserRouter as Router, Link, Route, Routes  } from 'react-router-dom'
 function App() {
   return (
@@ -17,6 +19,10 @@ function App() {
             <Route path='/re-state' element={<ReactSate />}>
             </Route>
             <Route path='/counter' element={<Counter />}>
+            </Route>
+            <Route path='/array' element={<ArrayExem />}>
+            </Route>
+            <Route path='/businessCard' element={<BusinessCard />}>
             </Route>
          </Routes> 
         </header>
