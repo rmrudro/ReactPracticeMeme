@@ -15,7 +15,12 @@ export default function BusinessCard() {
      */
     let starIcon=contact.isFavorite?"star-filled.png":"star-empty.png"
     function toggleFavorite() {
-        console.log("Toggle Favorite")
+        setContact(prevContact=>{
+            return{
+                ...prevContact,
+                isFavorite:!prevContact.isFavorite
+            }
+        })
     }
     
     return (
