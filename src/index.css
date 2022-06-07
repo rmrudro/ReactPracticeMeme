@@ -120,3 +120,13 @@ main {
   margin-right: -20px;
   z-index: 1;
 }
+.card--image {
+  width: 20%;
+  height: 20%;
+  padding: -10%;
+  padding-bottom: 0;
+}
+.card--favorite{
+  width: 3%;
+  height: 3%;
+}

@@ -2,10 +2,10 @@ import React from "react"
 
 export default function BusinessCard() {
     const [contact, setContact] = React.useState({
-        firstName: "John",
-        lastName: "Doe",
-        phone: "+1 (719) 555-1212",
-        email: "itsmyrealname@example.com",
+        firstName: "Rifat",
+        lastName: "Murtuza",
+        phone: "070 8359 2005",
+        email: "rm.rudro@gmail.com",
         isFavorite: false
     })
     /**
@@ -13,7 +13,7 @@ export default function BusinessCard() {
      * using the properties of our state object above
      * (Ignore `isFavorite` for now)
      */
-    
+    let starIcon=contact.isFavorite?"star-filled.png":"star-empty.png"
     function toggleFavorite() {
         console.log("Toggle Favorite")
     }
@@ -21,18 +21,18 @@ export default function BusinessCard() {
     return (
         <main>
             <article className="card">
-                <img src="./images/user.png" className="card--image" />
+                <img src="/images/profile.jpg" className="card--image" />
                 <div className="card--info">
                     <img 
-                        src={`../images/star-empty.png`} 
+                        src={`/images/${starIcon}`}
                         className="card--favorite"
                         onClick={toggleFavorite}
                     />
                     <h2 className="card--name">
                         {contact.firstName} {contact.lastName}
                     </h2>
-                    <p className="card--contact">+1 (719) 555-1212</p>
-                    <p className="card--contact">itsmyrealname@example.com</p>
+                    <p className="card--contact">{contact.phone}</p>
+                    <p className="card--contact">{contact.email}</p>
                 </div>
                 
             </article>
